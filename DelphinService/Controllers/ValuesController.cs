@@ -2,19 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DelphinService.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DelphinService.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
+
+        private AppDbContext context;
+
+        public ValuesController(AppDbContext context)
+        {
+            this.context = context;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return context.Users.Select(u => u.UserName).ToArray();
+            //return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
