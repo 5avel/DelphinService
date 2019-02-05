@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DelphinService.Data;
+﻿using DelphinService.DAL.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DelphinService.Controllers
 {
@@ -14,9 +12,9 @@ namespace DelphinService.Controllers
     public class ValuesController : ControllerBase
     {
 
-        private AppDbContext context;
+        private DSDbContext context;
 
-        public ValuesController(AppDbContext context)
+        public ValuesController(DSDbContext context)
         {
             this.context = context;
         }

@@ -1,17 +1,17 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿
+using DelphinService.DAL.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace DelphinService.Data
+namespace DelphinService.DAL.Data
 {
     public class SeedDatabase
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            var context = serviceProvider.GetRequiredService<AppDbContext>();
+            var context = serviceProvider.GetRequiredService<DSDbContext>();
             var userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
             context.Database.EnsureCreated();
 

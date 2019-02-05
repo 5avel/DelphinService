@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelphinService", "DelphinService\DelphinService.csproj", "{1194DD54-2F7A-41F7-B358-0669BDD436AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelphinService", "DelphinService\DelphinService.csproj", "{1194DD54-2F7A-41F7-B358-0669BDD436AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelphinService.DAL", "DelphinService.DAL\DelphinService.DAL.csproj", "{6325FC82-E3A0-4F99-85C2-82075B9CD28E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelphinService.Core", "DelphinService.Core\DelphinService.Core.csproj", "{754F9BE3-6EDA-4726-A281-0A76107248CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelphinService.Common", "DelphinService.Common\DelphinService.Common.csproj", "{FB9AB840-906F-4D34-B5A5-A827758A3F6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{1194DD54-2F7A-41F7-B358-0669BDD436AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1194DD54-2F7A-41F7-B358-0669BDD436AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1194DD54-2F7A-41F7-B358-0669BDD436AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6325FC82-E3A0-4F99-85C2-82075B9CD28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6325FC82-E3A0-4F99-85C2-82075B9CD28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6325FC82-E3A0-4F99-85C2-82075B9CD28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6325FC82-E3A0-4F99-85C2-82075B9CD28E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{754F9BE3-6EDA-4726-A281-0A76107248CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754F9BE3-6EDA-4726-A281-0A76107248CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754F9BE3-6EDA-4726-A281-0A76107248CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754F9BE3-6EDA-4726-A281-0A76107248CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9AB840-906F-4D34-B5A5-A827758A3F6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9AB840-906F-4D34-B5A5-A827758A3F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9AB840-906F-4D34-B5A5-A827758A3F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9AB840-906F-4D34-B5A5-A827758A3F6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
