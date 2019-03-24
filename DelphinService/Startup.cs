@@ -78,7 +78,7 @@ namespace DelphinService
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSpaStaticFiles();
+            app.UseSpaStaticFiles(); // 
 
             app.UseAuthentication();
 
