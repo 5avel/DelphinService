@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace DelphinService.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
