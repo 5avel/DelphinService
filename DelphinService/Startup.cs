@@ -11,14 +11,17 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Data;
 
 namespace DelphinService
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private IHostingEnvironment env;
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+            this.env = env;
         }
 
         public IConfiguration Configuration { get; }
@@ -32,9 +35,14 @@ namespace DelphinService
             {
                 configuration.RootPath = "ClientApp/dist";
             });
-
-            services.AddDbContext<DSDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            if(env.IsDevelopment())
+            {
+                services.AddDbContext<DSDbContext>(options => options.UseInMemoryDatabase(databaseName: "Add_writes_to_database"));
+            }
+            else
+            {
+                services.AddDbContext<DSDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            }
             services.AddIdentity<AppUser, IdentityRole>()
                 .AddEntityFrameworkStores<DSDbContext>()
                 .AddDefaultTokenProviders();
